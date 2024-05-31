@@ -23,14 +23,37 @@ class Matrix
     #
     # i should do a visualizator fixer for it tbh
     [
-      [nil, nil, nil, nil, nil, nil, nil, nil],
-      [nil, nil, nil, nil, nil, nil, nil, nil],
-      [nil, nil, nil, nil, nil, nil, nil, nil],
-      [nil, nil, nil, nil, nil, nil, nil, nil],
-      [nil, nil, nil, nil, nil, nil, nil, nil],
-      [nil, nil, nil, nil, nil, nil, nil, nil],
-      [nil, nil, nil, nil, nil, nil, nil, nil],
-      [nil, nil, nil, nil, nil, nil, nil, nil]
+     [nil, nil, nil, nil, nil, nil, nil, nil],
+     [nil, nil, nil, nil, nil, nil, nil, nil],
+     [nil, nil, nil, nil, nil, nil, nil, nil],
+     [nil, nil, nil, nil, nil, nil, nil, nil],
+     [nil, 's', nil, nil, nil, nil, nil, nil],
+     [nil, nil, nil, nil, nil, nil, nil, nil],
+     [nil, nil, nil, nil, nil, nil, nil, nil],
+     [nil, nil, nil, nil, nil, nil, nil, nil]
+      #['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a',],
+      #['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a',],
+      #['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a',],
+      #['b', 'b', 'a', 'a', 'a', 'a', 'a', 'a',],
+      #['b', 'b', 'a', 'a', 'a', 'a', 'a', 'a',],
+      #['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a',],
+      #['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a',],
+      #['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a',]
     ]
   end
+
+  def matrix_reader(matrix)
+    val_y = matrix.length
+    val_x = matrix[0].length
+    val_y.times do |y|
+      val_x.times do |x|
+        (matrix[x][-1-y] == nil) ? (print ' ') : (print matrix[x][-1-y]) 
+      end
+      puts
+    end
+  end
 end
+
+alpha = Matrix.new
+
+alpha.matrix_reader(alpha.create_empty_matrix)
