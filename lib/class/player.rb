@@ -12,7 +12,7 @@
 ##    Password: hashed int,
 ##    ID: int-const,
 ##    Games: int,
-##    WR: foat * 100
+##    WR: float * 100
 ##    WINS: int
 ##    LOSES: int
 ##    DRAWS: int
@@ -23,5 +23,5 @@
 # and therefore keep this info as its own class
 #
 
-class Player 
+class Player
 end

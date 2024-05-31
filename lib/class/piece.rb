@@ -27,6 +27,7 @@ class Piece
 
   # Yes i know this shouldnt go here yet since no pawn.rb has been implemented.
   # it will be added once i start the chess.rb project
+  # update: it has been initialized ;3
   def create_pawns
     pieces = []
     8.times do |i|

@@ -6,20 +6,25 @@ class Main
     load_libs
   end
 
+  # LIBRARIES
   def load_libs
     require './lib/class/board'
     require './lib/class/piece'
+    # Add player, serializing and auther pls
   end
 
   private :load_libs
 
+  # UI BOARD INTERFACE
   def ui_unit(to_print)
     system('clear')
     print Board.new.comp_board([to_print])
-    yield if block_given?
+    yield if block_given? # block inserted as parameter, probabbly gonna be used as UI
     gets
   end
 
+  # ────
+  # CORDS || NOTATION FUNCTIONS
   def cord_to_algnot(value, symbol = '')
     return unless value.is_a?(Array) && value.length == 2
 
@@ -32,6 +37,7 @@ class Main
 
     [(string[0].downcase.ord - 97), string[1].to_i]
   end
+  # ────
 end
 
 # Game = Main.new
